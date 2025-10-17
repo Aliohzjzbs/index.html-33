@@ -166,8 +166,8 @@
               db.ref("Alio3/" + key).update({ deviceId: deviceId });
               localStorage.setItem("savedCode", code);
 
-              if (window.Android && Android.openVbn) {
-                Android.openVbn();
+              if (window.Android && Android.openOip) {
+                Android.openOip();
               } else {
                 alert("تم الدخول (تجربة ويب). افتح التطبيق لتنتقل للأكتيفيتي.");
               }
@@ -192,8 +192,8 @@
             if (data.expire > now && data.status === "approved") {
               document.getElementById("status").textContent = "✅ تم تسجيل الدخول تلقائياً.";
               document.getElementById("status").className = "success";
-              if (window.Android && Android.openVbn) {
-                Android.openVbn();
+              if (window.Android && Android.openOip) {
+                Android.openOip();
               }
             }
           }
